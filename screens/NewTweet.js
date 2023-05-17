@@ -8,7 +8,7 @@ const user = {
     username: 'VadimNotJustDev',
     name: 'Vadim',
     image:
-        'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.png',
+        'https://avatars.githubusercontent.com/u/62232366?v=4',
 }
 
 const NewTweet = () => {
@@ -38,7 +38,7 @@ const NewTweet = () => {
             <View style={styles.newTweetContainer}>
                 <Image
                     source={{ uri: user.image }}
-                    style={{ width: 45, height: 45 }}
+                    style={{ width: 45, height: 45, borderRadius: 50 }}
                 />
                 <TextInput
                     value={tweettext}

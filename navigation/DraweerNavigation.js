@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { View, Text } from 'react-native';
 import {
     createDrawerNavigator, DrawerContentScrollView,
     DrawerItemList,
@@ -6,6 +7,7 @@ import {
 } from '@react-navigation/drawer';
 
 import StackNavigation from './StackNavigation';
+import DrawerCard from '../components/DrawerCard';
 
 
 const Drawer = createDrawerNavigator();
@@ -13,17 +15,9 @@ const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = (props) => {
     return (
-        <DrawerContentScrollView {...props}>
-            <DrawerItemList {...props} />
-            <DrawerItem
-                label="Close drawer"
-                onPress={() => props.navigation.closeDrawer()}
-            />
-            <DrawerItem
-                label="Toggle drawer"
-                onPress={() => props.navigation.toggleDrawer()}
-            />
-        </DrawerContentScrollView>
+        <View>
+            <DrawerCard />
+        </View>
     );
 }
 

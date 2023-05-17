@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, StatusBar, Image, TextInput, Pressable } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Image, TextInput, Pressable, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
+import SpaceCard from '../components/SpaceCard';
 
 const SpaceScreen = ({ navigation }) => {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{ backgroundColor: 'white', flex: 1 }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
 
             <View style={styles.SearchHeader}>
@@ -17,6 +18,16 @@ const SpaceScreen = ({ navigation }) => {
                 </Pressable>
                 <Text style={{ fontSize: 18, fontWeight: 600, letterSpacing: 1 }}>SocialBird Space</Text>
             </View>
+
+            <ScrollView style={{ paddingHorizontal: 20, paddingTop: 30, }}>
+                <Text style={{ fontSize: 24, fontWeight: 700, letterSpacing: .8 }}>Happening Now</Text>
+                <Text style={{ color: 'gray' }}>Space going on right now</Text>
+                <SpaceCard />
+                <SpaceCard />
+                <SpaceCard />
+                <SpaceCard />
+                <SpaceCard />
+            </ScrollView>
 
         </SafeAreaView>
     )

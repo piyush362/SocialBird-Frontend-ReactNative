@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
                 <View style={styles.homeHeader}>
                     <Pressable onPress={() => navigation.openDrawer()}>
                         <Image
-                            source={{ uri: 'https://bcud.unipune.ac.in/root/Images/images/profile.png' }}
+                            source={{ uri: 'https://avatars.githubusercontent.com/u/62232366?v=4' }}
                             style={{ width: 40, height: 40, borderRadius: 50 }}
                         />
                     </Pressable>
@@ -35,9 +35,10 @@ const HomeScreen = ({ navigation }) => {
             </View>
             <ScrollView style={{ marginBottom: 50 }}>
                 {
-                    tweets.map((item) => (
+                    tweets.map((item, index) => (
                         <TweetsCard
-                            key={item.id}
+                            key={index}
+                            id={item.id}
                             tweetId={item.id}
                             tweet={item.content}
                             username={item.user.username}
